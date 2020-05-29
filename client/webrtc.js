@@ -19,6 +19,7 @@ function start() {
 
   // check if "&displayName=xxx" is appended to URL, otherwise alert user to populate
   var urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams);
   localDisplayName = urlParams.get('displayName') || prompt('Enter your name', '');
   document.getElementById('localVideoContainer').appendChild(makeLabel(localDisplayName));
 
